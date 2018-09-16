@@ -2,11 +2,16 @@
 
 namespace StudentMinMax
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            foreach (var student in students)
+            {
+                Console.WriteLine($"{student.Name} Min: {student.GetMinimumScore()} Max: {student.GetMaximumScore()}");
+            }
+
+            Console.ReadLine();
         }
     }
 }
